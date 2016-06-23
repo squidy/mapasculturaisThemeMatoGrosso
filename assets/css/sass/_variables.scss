@@ -13,19 +13,18 @@
 //$gray-light: #e2e2e2 !default;
 //$gray-lighter: #eee !default;
 
-$brand-primary: #00317B;
+//$brand-primary: #000000 !default;
 //$brand-accent: #000000 !default;
 
-$brand-event:   #0172C0; 
-$brand-agent:   #185693;
-$brand-space:   #22448B;
-$brand-project: #2460AC;
-$brand-devs:    #0E9AD8;
+//$brand-event: #000000 !default;
+//$brand-agent: #000000 !default;
+//$brand-space: #000000 !default;
+//$brand-project: #000000 !default;
 
-//$brand-info: #0E9AD8;
-//$brand-warning: #cc9933 !default;
-//$brand-danger: #cc3333 !default;
-//$brand-success: #66cc66 !default;
+//$brand-info: #000000 !default;
+//$brand-warning: #000000 !default;
+//$brand-danger: #000000 !default;
+//$brand-success: #000000 !default;
 //$brand-default: $gray-light !default;
 
 
@@ -47,3 +46,10 @@ $brand-devs:    #0E9AD8;
 
 //** Link hover color same as $link-color.
 //$link-hover-color:      $link-color !default;
+
+
+$brand-primary: #00317b !default;
+$brand-event:   #0172c0 !default;
+$brand-agent:   #185693 !default;
+$brand-space:   #22448b !default;
+$brand-project: #2460ac !default;

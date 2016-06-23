@@ -18,16 +18,114 @@
 // }
 
 //_home.scss
+// #home-watermark {
+// 	background-position: right bottom;
+// }
+  #nav-developers {
+     background: #0e9ad8;
+ }
+ #home-developers {
+     background: #0e9ad8;
+ }
 
-#nav-developers {
-    background: #0E9AD8;
-}
-#home-developers {
-    background: #0E9AD8;
+
+#brand-logo img {
+	width: 280px;
 }
 
 #organization-logo img {
-	width: 190px;
+    width: 200px;
+}
+
+#main-header {
+    border-top: 6px solid #0e9ad8;
 }
 
 
+@font-face{ 
+	font-family: 'nexalightregular';
+	src: url('../fonts/nexalight-webfont.eot');
+	src: url('../fonts/nexalight-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/nexalight-webfont.woff') format('woff'),
+	     url('../fonts/nexalight-webfont.ttf') format('truetype'),
+	     url('../fonts/nexalight-webfont.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;		 
+}
+
+@font-face{ 
+	font-family: 'nexaboldregular';
+	src: url('../fonts/nexabold-webfont.eot');
+	src: url('../fonts/nexabold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/nexabold-webfont.woff') format('woff'),
+	     url('../fonts/nexabold-webfont.ttf') format('truetype'),
+	     url('../fonts/nexabold-webfont.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;		 
+}
+
+.font-NexaB {font-family: 'nexaboldregular'}
+.font-NexaL {font-family: 'nexalightregular'}
+
+
+
+body {
+	font-family: 'nexalightregular'!important;
+}
+
+
+input, textarea, button, select, .btn {
+		font-family: 'nexalightregular'!important;	
+} 
+
+
+.menu > li > a {
+    font-size: 0.90rem;
+    line-height: 1.90rem;   
+}
+
+#secondary-menu {
+    padding-top: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'nexaboldregular'!important; 
+}
+
+
+
+.menu > li div.icon {
+     font-size: 1.5rem;
+}
+
+
+.dropdown, input, textarea  {
+    font-size: .90rem;
+}
+
+.home-entity .random-feature {
+    background-position: top center;
+    background-size: cover;
+}
+
+.icon-manual:before {
+  content: "\e022"; }
+ 
+
+ #main-section {
+    margin-top: 97px;
+}
+
+#main-footer {
+    background: #fff none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    height: 50px;
+    margin-right: 5px;
+    padding: 0;
+    position: fixed;
+    text-align: right;
+    width: 100%;
+    z-index: 1200;
+    border-top:6px solid #0e9ad8;    
+}
