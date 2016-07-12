@@ -62,10 +62,34 @@ return array(
                 'Não' => 'Não'
             )
         ),
+        'acessibilidade_fisica' => array(
+            'label' => 'Acessibilidade física',
+            'type' => 'multiselect',
+            'allowOther' => true,
+            'allowOtherText' => 'Outros',
+            'options' => array(
+                'Banheiros adaptados',
+                'Rampa de acesso',
+                'Elevador',
+                'Sinalização tátil',
+                
+                // vindos do sistema de museus.cultura.gov.br
+                'Bebedouro adaptado',
+                'Cadeira de rodas para uso do visitante',
+                'Circuito de visitação adaptado',
+                'Corrimão nas escadas e rampas',
+                'Elevador adaptado',
+                'Rampa de acesso',
+                'Sanitário adaptado',
+                'Telefone público adaptado',
+                'Vaga de estacionamento exclusiva para deficientes',
+                'Vaga de estacionamento exclusiva para idosos'
+            )
+        ),
         'capacidade' => array(
             'label' => 'Capacidade',
             'validations' => array(
-                "v::int()->positive()" => "A capacidade deve ser um número positivo."
+                "v::intVal()->positive()" => "A capacidade deve ser um número positivo."
             )
         ),
 
@@ -73,6 +97,59 @@ return array(
             'label' => 'Endereço',
             'type' => 'text'
         ),
+        
+
+        'En_CEP' => [
+            'label' => 'CEP',
+        ],
+        'En_Nome_Logradouro' => [
+            'label' => 'Logradouro',
+        ],
+        'En_Num' => [
+            'label' => 'Número',
+        ],
+        'En_Complemento' => [
+            'label' => 'Complemento',
+        ],
+        'En_Bairro' => [
+            'label' => 'Bairro',
+        ],
+        'En_Municipio' => [
+            'label' => 'Município',
+        ],
+        'En_Estado' => [
+            'label' => 'Estado',
+            'type' => 'select',
+            'options' => array(
+                'AC'=>'Acre',
+                'AL'=>'Alagoas',
+                'AP'=>'Amapá',
+                'AM'=>'Amazonas',
+                'BA'=>'Bahia',
+                'CE'=>'Ceará',
+                'DF'=>'Distrito Federal',
+                'ES'=>'Espírito Santo',
+                'GO'=>'Goiás',
+                'MA'=>'Maranhão',
+                'MT'=>'Mato Grosso',
+                'MS'=>'Mato Grosso do Sul',
+                'MG'=>'Minas Gerais',
+                'PA'=>'Pará',
+                'PB'=>'Paraíba',
+                'PR'=>'Paraná',
+                'PE'=>'Pernambuco',
+                'PI'=>'Piauí',
+                'RJ'=>'Rio de Janeiro',
+                'RN'=>'Rio Grande do Norte',
+                'RS'=>'Rio Grande do Sul',
+                'RO'=>'Rondônia',
+                'RR'=>'Roraima',
+                'SC'=>'Santa Catarina',
+                'SP'=>'São Paulo',
+                'SE'=>'Sergipe',
+                'TO'=>'Tocantins',
+            )
+        ],
 
         'horario' => array(
             'label' => 'Horário de funcionamento',
@@ -130,7 +207,12 @@ return array(
             'range' => array(20,29),
             'items' => array(
                 20 => array( 'name' => 'Biblioteca Pública' ),
-                21 => array( 'name' => 'Biblioteca Privada' )
+                21 => array( 'name' => 'Biblioteca Privada' ),
+                22 => array( 'name' => 'Biblioteca Comunitária (incluí­dos os pontos de leitura)'),
+                23 => array( 'name' => 'Biblioteca Escolar'),
+                24 => array( 'name' => 'Biblioteca Nacional'),
+                25 => array( 'name' => 'Biblioteca Universitária'),
+                26 => array( 'name' => 'Biblioteca Especializada')
             )
         ),
 
@@ -312,6 +394,7 @@ return array(
                 204 => array( 'name' => 'Bem Móvel ou Integrado' ),
                 205 => array( 'name' => 'Sitio Histórico' ),
                 206 => array( 'name' => 'Documentação' ),
+                207 => array( 'name' => 'Coleções' ),
             )
         ),
 
@@ -358,7 +441,7 @@ return array(
         ),
         'default_value' => array(),
         'validations' => array(
-            'v::arr()->notEmpty()' => 'Você deve marcar ao menos uma opção.'
+            'v::arrayType()->notEmpty()' => 'Você deve marcar ao menos uma opção.'
         )
     ),
     'checkbox' => array(
@@ -418,7 +501,7 @@ return array(
         ),
 
         'validations' => array(
-            "v::string()->in('AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR','RJ','RN','RO','RR','RS','SC','SE','SP','TO','OUT')" => 'O estado informado não existe.'
+            "v::stringType()->in('AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR','RJ','RN','RO','RR','RS','SC','SE','SP','TO','OUT')" => 'O estado informado não existe.'
         )
     )
      */
