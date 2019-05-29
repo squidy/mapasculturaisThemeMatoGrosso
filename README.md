@@ -1,2 +1,2 @@
 # mapasculturaisThemeMatoGrosso
-Tema da instalação do Mapas Culturais mapas.cultura.mt.gov.br 
+Tema da instalação do Mapas Culturais mapas.mt.gov.br - Teste CTI
